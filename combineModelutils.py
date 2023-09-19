@@ -190,14 +190,14 @@ class seedVIG_Datasets1(Dataset):
 
 if __name__ == '__main__':
     # # # data1 folder for SEED datasets
-    label_dir1 = r'C:\Users\yuejw\Desktop\ydy\crossdata\data\Multichannel\CSVPerclos'
-    data_dir1 = r'C:\Users\yuejw\Desktop\ydy\crossdata\data\Multichannel\FIR128Randint'
+    label_dir1 = r'CSVPerclos'
+    data_dir1 = r'FIR128Randint'
     test_participants = ['s01','s02','s03'] # 定义测试集被试编码
     # 将整体数据按照被试分为训练集和测试集，如文件夹里已有map文件，会先删除再产生
     generate_map1(data_dir1, label_dir1, test_participants)
 
     # test EEG_Datasets
-    train_map = r"C:\Users\yuejw\Desktop\ydy\crossdata\code\Domain adaptation\SHOT\idx\cross_subject\meta\cross_dataset1\randint_mapfiles\train_data_map.csv"
+    train_map = r"randint_mapfiles\train_data_map.csv"
 
     # 开始数据的随机值,每个epock随机一次，可以保证每个epock的样本都是不同的
     start_num = random.randrange(0, 1024)
